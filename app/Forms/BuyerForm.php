@@ -10,11 +10,11 @@ class BuyerForm extends Form
     public function buildForm()
     {
         $this -> 
-        add('fullname', Field::TEXT, [
+        add('name', Field::TEXT, [
             'rules' => 'required',
         'label' => 'Purchaser Name'
         ])
-        -> add('cellnumber', Field::TEXT, [
+        -> add('cell', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Cell Number'
         ])
