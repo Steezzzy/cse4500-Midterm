@@ -10,6 +10,8 @@ class Manufac extends Model
     use HasFactory;
     protected $fillable = ['manufacture', 'manfac_email', 'manfac_phone'];
 
+    protected $table = 'manufac';
+
     public function Equipment(){
 
         return $this ->hasMany(Equipment::class);
