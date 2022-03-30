@@ -22,7 +22,7 @@
           <td>{{ $equipment->name }}</td>
           <td>{{ $equipment->price }}</td>
           <td>{{ $equipment->ram }}</td>
-          <td>{{ $equipment->manufacture -> name }}</td>
+          <td>{{ $equipment->manufacture -> manufacture }}</td>
           <td>{{ $equipment->category }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('equipment.show',['equipment'=>$equipment->id]) }}">View</a></td>
         </tr>
