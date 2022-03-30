@@ -20,7 +20,7 @@ class ManufactForm extends Form
         ])
         -> add('manfac_phone', Field::TEXT, [
         'rules' => 'required',
-        'label' => 'Manufacture'
+        'label' => 'Manufacture Phone'
          ])
          ->add('submit', 'submit',[
             'label' => 'Submit!'
