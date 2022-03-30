@@ -18,7 +18,7 @@ class BuyerForm extends Form
         'rules' => 'required',
         'label' => 'Cell Number'
         ])
-        -> add('fullname', Field::TEXT, [
+        -> add('address', Field::TEXT, [
         'rules' => 'required',
         'label' => 'Address'
          ])
