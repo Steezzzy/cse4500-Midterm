@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Equipment;
+use App\Forms\EquipForm;
 use Kris\LaravelFormBuilder\FormBuilder;
 
 class EquipmentController extends Controller

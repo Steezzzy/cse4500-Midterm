@@ -10,6 +10,7 @@ class Equipment extends Model
     use HasFactory;
     protected $fillable = ['name', 'price', 'ram', 'manufac_id','category'];
 
+    protected $table = 'equipment';
 
     public function manufacture(){
 
