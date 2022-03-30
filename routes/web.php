@@ -3,6 +3,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\equipment;
 use App\Http\Controllers\invoice;
 use App\Http\Controllers\manufacture;
+use App\Http\Controllers\Notes;
+use App\Http\Controllers\Buyer;
+
+Route::resource('/buyer', Buyer::class);
+
 
 Route::get('/', function () {
     return view('welcome');

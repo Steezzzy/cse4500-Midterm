@@ -18,7 +18,7 @@ return new class extends Migration
             $table ->text('notes');
             $table ->text('services');
             $table ->text('software');
-            $table->foreignId('equipment_id') ->constrained('equipment');
+            $table->foreignId('equipment_id') ->constrained('equipment')->onDelete('cascade');;;
             $table->timestamps();
         });
     }

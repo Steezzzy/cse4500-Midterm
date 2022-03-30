@@ -8,10 +8,9 @@ class equipment extends Controller
 {
     public function index()
     {
-        $invoices = invoice::all();
-        return view('invoices',compact('invoices'));
+        $equipment = equipment::all();
+        return view('equipment.list',compact('equipment'));
     }
-
 
     public function create()
     {

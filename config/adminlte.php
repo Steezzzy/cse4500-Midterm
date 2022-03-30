@@ -236,7 +236,7 @@ return [
         ],
         [
             'text' => 'Manage Buyers',
-            'url'  => 'customer',
+            'url'  => 'buyer',
             'icon' => 'fas fa-fw fa-users',
         ],
         [         

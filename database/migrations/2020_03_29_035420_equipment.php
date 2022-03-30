@@ -18,7 +18,7 @@ return new class extends Migration
             $table ->string('name');
             $table ->float('price', 8,2);
             $table ->text('ram'); 
-            $table->foreignId('manufac_id') ->constrained('manufac');
+            $table->foreignId('manufac_id') ->constrained('manufac')->onDelete('cascade');;;
             $table ->text('category');
             $table->timestamps();
         });
