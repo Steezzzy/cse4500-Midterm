@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Buyer;
 use App\Forms\BuyerForm;
-
+use Kris\LaravelFormBuilder\FormBuilder;
 
 
 class BuyerController extends Controller
@@ -32,7 +32,7 @@ class BuyerController extends Controller
         $form->redirectIfNotValid();
 
         Buyer::create($form->getFieldValues());
-        
+
         return $this->index();
     }
 
