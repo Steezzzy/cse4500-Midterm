@@ -7,6 +7,10 @@ use App\Http\Controllers\Notes;
 use App\Http\Controllers\BuyerController;
 
 Route::resource('/buyer', BuyerController::class);
+Route::resource('/equipment', EquipmentController::class);
+Route::resource('/invoice', InvoiceController::class);
+Route::resource('/manufacturer', ManufactureController::class);
+Route::resource('/note', NotesController::class);
 
 
 Route::get('/', function () {
