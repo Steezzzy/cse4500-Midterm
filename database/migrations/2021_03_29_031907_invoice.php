@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('invoice', function (Blueprint $table) {
             $table->id();
             $table->foreignId('buyer_id') ->constrained('buyers');
-            $table->foreignId('equipment_id') ->constrained('equipments');
+            $table->foreignId('equipment_id') ->constrained('equipment');
             $table ->date('date_purchase');
             $table->timestamps();
         });
