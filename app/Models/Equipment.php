@@ -14,7 +14,7 @@ class Equipment extends Model
 
     public function manufacture(){
 
-        return $this ->belongTo(Manufac::class);
+        return $this ->belongsTo(Manufac::class);
 
     }
 
