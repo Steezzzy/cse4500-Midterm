@@ -3,38 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Todo;
 
-class TodoController extends Controller
+class equipment extends Controller
 {
-
     public function index()
     {
-        $todos = Todo::all();
-        return view('todos',compact('todos'));
+        $invoices = invoice::all();
+        return view('invoices',compact('invoices'));
     }
 
 
     public function create()
     {
-        return view('todos.create');
+        return view('invoices.create');
     }
 
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-             'purchase' => 'required',
-             'user' => 'required',
-             'notes' => 'required',
+             'Invoice Number' => 'required',
+             'Price' => 'required',
+             'Name' => 'required',
+             'Purchase Date' => 'required',
              'manufacture' => 'required',
              'category' => 'required',
         ]);
 
-        $todo = Todo::create([ 
-             'purchase' => $request->purchase, 
-             'user' => $request->user, 
-             'notes' => $request->notes,
+        $invoice = invoice::create([ 
+             'Invoice Number' => $request->purchase, 
+             'Price' => $request->user, 
+             'Name' => $request->notes,
+             'Purchase Date' => $request->notes,
              'manufacture' => $request->manufacture,
              'category' => $request->category, 
         ]);
@@ -44,8 +44,8 @@ class TodoController extends Controller
 
     public function show($id)
     {
-        $todo= Todo::find($id); 
-        return view('todos.show',compact('todo'));
+        $invoice= invoice::find($id); 
+        return view('invoice.show',compact('invoice'));
     }
 
 
@@ -64,6 +64,6 @@ class TodoController extends Controller
     public function destroy($id)
     {
        
-        return $this->index();
+        
     }
 }
