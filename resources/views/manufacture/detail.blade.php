@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Buyers')
+@section('title', 'Manufacture')
 
 @section('content_header')
-    <h1>Manufactures</h1>
+    <h1>Manufacture</h1>
 @stop
 
 @section('content')
@@ -11,20 +11,14 @@
   <div class="card-body">
     <div>
         <div class="h1">
-            {{ $equipment->name }}
+            {{ $manufacture->manufacture }}
         </div>
         <dl class="row">
-            <dt class="col-sm-3">Price</dt>
-            <dd class="col-sm-9">{{ $equipment->price }}</dd>
+            <dt class="col-sm-3">Cell Phone</dt>
+            <dd class="col-sm-9">{{ $manufacture->manfac_email }}</dd>
 
-            <dt class="col-sm-3">Ram</dt>
-            <dd class="col-sm-9">{{ $equipment->ram }}</dd>
-
-            <dt class="col-sm-3">Manufacture</dt>
-            <dd class="col-sm-9">{{ $equipment->manufac_id }}</dd>
-
-            <dt class="col-sm-3">Category</dt>
-            <dd class="col-sm-9">{{ $equipment->category }}</dd>
+            <dt class="col-sm-3">Address</dt>
+            <dd class="col-sm-9">{{ $manufacture->manfac_phone }}</dd>
         </dl>
     </div>
 @stop

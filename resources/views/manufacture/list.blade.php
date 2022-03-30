@@ -16,22 +16,20 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($equipment AS $equipment)
+        @foreach($manufacture AS $manufacture)
         <tr>
-          <td>{{ $equipment->id }}</td>
-          <td>{{ $equipment->name }}</td>
-          <td>{{ $equipment->price }}</td>
-          <td>{{ $equipment->ram }}</td>
-          <td>{{ $equipment->manufac_id }}</td>
-          <td>{{ $equipment->category }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('equipment.show',['equipment'=>$equipment->id]) }}">View</a></td>
+          <td>{{ $manufacture->id }}</td>
+          <td>{{ $manufacture->manufacture }}</td>
+          <td>{{ $manufacture->manfac_email }}</td>
+          <td>{{ $manufacture->manfac_phone }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturer.show',['manufacturer'=>$manufacture->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
 </div>
-<a href="{{ route('equipment.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('manufacture.create') }} " class="btn btn-primary" >Create</a>
 
 
 
