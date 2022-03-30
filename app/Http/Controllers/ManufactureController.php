@@ -11,7 +11,7 @@ class ManufactureController extends Controller
 {
     public function index()
     {
-        $manufacture = Manufacture::all();
+        $manufacture = Manufac::all();
         return view('manufacture.list',compact('manufacture'));
     }
 
@@ -30,7 +30,7 @@ class ManufactureController extends Controller
 
         $form->redirectIfNotValid();
 
-        Manufacture::create($form->getFieldValues());
+        Manufac::create($form->getFieldValues());
 
         return $this->index();
     }
@@ -38,7 +38,7 @@ class ManufactureController extends Controller
 
     public function show($id)
     {
-        $manufacture= Manufacture::find($id); 
+        $manufacture= Manufac::find($id); 
         return view('manufacture.detail',compact('manufacture'));
     }
 }
