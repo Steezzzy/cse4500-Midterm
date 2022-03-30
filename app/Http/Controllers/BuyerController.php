@@ -11,7 +11,7 @@ class BuyerController extends Controller
 {
     public function index()
     {
-        $buyer = BuyerController::all();
+        $buyer = Buyer::all();
         return view('buyer.list',compact('buyer'));
     }
 
@@ -41,7 +41,7 @@ class BuyerController extends Controller
 
     public function show($id)
     {
-        $buyer= BuyerController::find($id); 
+        $buyer= Buyer::find($id); 
         return view('buyer.show',compact('buyer'));
     }
 }
