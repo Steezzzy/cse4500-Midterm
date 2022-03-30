@@ -22,14 +22,14 @@
           <td>{{ $manufacture->manufacture }}</td>
           <td>{{ $manufacture->manfac_email }}</td>
           <td>{{ $manufacture->manfac_phone }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('manufacture.show',['manufacture'=>$manufacture->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturer.show',['manufacturer'=>$manufacture->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
     </table>
   </div>
 </div>
-<a href="{{ route('manufacture.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('manufacturer.create') }} " class="btn btn-primary" >Create</a>
 
 
 
