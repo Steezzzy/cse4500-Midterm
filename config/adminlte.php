@@ -237,7 +237,7 @@ return [
         [
             'text' => 'Manage Buyers',
             'url'  => 'customer',
-            'icon' => 'fas fa-fw fa-User',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [         
             'text' => 'Manage Equipment',
