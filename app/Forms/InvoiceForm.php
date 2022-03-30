@@ -12,17 +12,17 @@ class InvoiceForm extends Form
     public function buildForm()
     {
         $this -> 
-        add('name', Field::TEXT, [
+        add('buyer_id', Field::NUMBER, [
             'rules' => 'required',
-        'label' => 'Purchaser Name'
+        'label' => 'Buyer Number'
         ])
-        -> add('cell', Field::TEXT, [
+        -> add('equipment_id', Field::NUMBER, [
         'rules' => 'required',
-        'label' => 'Cell Number'
+        'label' => 'Equipment Number'
         ])
-        -> add('address', Field::TEXT, [
+        -> add('date_purchase', Field::DATE, [
         'rules' => 'required',
-        'label' => 'Address'
+        'label' => 'Date of Purchase'
          ])
          ->add('submit', 'submit',[
             'label' => 'Submit!'
