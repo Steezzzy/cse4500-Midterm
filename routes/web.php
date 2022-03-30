@@ -4,9 +4,9 @@ use App\Http\Controllers\equipment;
 use App\Http\Controllers\invoice;
 use App\Http\Controllers\manufacture;
 use App\Http\Controllers\Notes;
-use App\Http\Controllers\Buyer;
+use App\Http\Controllers\BuyerController;
 
-Route::resource('/buyer', BuyerController::class);
+Route::resource('/buyer', Buyer::class);
 
 
 Route::get('/', function () {
