@@ -1,9 +1,9 @@
 <?php
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\equipment;
-use App\Http\Controllers\invoice;
-use App\Http\Controllers\manufacture;
-use App\Http\Controllers\Notes;
+use App\Http\Controllers\EquipmentController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ManufactureController;
+use App\Http\Controllers\NotesController;
 use App\Http\Controllers\BuyerController;
 
 Route::resource('/buyer', BuyerController::class);

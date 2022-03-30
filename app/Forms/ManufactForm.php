@@ -1,8 +1,9 @@
 <?php
 
-manufacturespace App\Forms;
+namespace App\Forms;
 
 use Kris\LaravelFormBuilder\Form;
+use Kris\LaravelFormBuilder\Field;
 
 class ManufactForm extends Form
 {
