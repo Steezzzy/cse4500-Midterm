@@ -40,6 +40,6 @@ class BuyerController extends Controller
     public function show($id)
     {
         $buyer= Buyer::find($id); 
-        return view('buyer.show',compact('buyer'));
+        return view('buyer.detail',compact('buyer'));
     }
 }
