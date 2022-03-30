@@ -19,7 +19,7 @@ class ManufactureController extends Controller
     {
         $form = $formBuilder->create(ManufactForm::class, [
             'method' => 'POST',
-            'url' => route('manufacture.store')
+            'url' => route('manufacturer.store')
         ]);
         return view('manufacture.create', compact('form'));
     }
