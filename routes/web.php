@@ -6,7 +6,7 @@ use App\Http\Controllers\manufacture;
 use App\Http\Controllers\Notes;
 use App\Http\Controllers\Buyer;
 
-Route::resource('/buyer', Buyer::class);
+Route::resource('/buyer', BuyerController::class);
 
 
 Route::get('/', function () {

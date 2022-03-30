@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Buyer;
 
-class Buyer extends Controller
+
+
+class BuyerController extends Controller
 {
     public function index()
     {
@@ -42,5 +44,4 @@ class Buyer extends Controller
         $buyer= Buyer::find($id); 
         return view('buyer.show',compact('buyer'));
     }
-
 }
