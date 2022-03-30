@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Buyer;
+use App\Forms\BuyerForm;
 
 
 
@@ -15,26 +16,23 @@ class BuyerController extends Controller
         return view('buyer.list',compact('buyer'));
     }
 
-    public function create()
+    public function create(FormBuilder $formBuilder)
     {
-        return view('buyer.create');
+        $form = $formBuilder->create(BuyerForm::class, [
+            'method' => 'POST',
+            'url' => route('buyer.store')
+        ]);
+        return view('buyer.create', compact('form'));
     }
 
-    public function store(Request $request)
+    public function store(FormBuilder $formBuilder)
     {
-        $validated = $request->validate([
-             'name' => 'required',
-             'cell' => 'required',
-             'address' => 'required',
-        ]);
+        $form = $formBuilder->create(BuyerForm::class);
 
-        $todo = Buyer::create([ 
-             'name' => $request->name, 
-             'cell' => $request->cell, 
-             'address' => $request->address,
-            
-        ]);
+        $form->redirectIfNotValid();
 
+        Buyer::create($form->getFieldValues());
+        
         return $this->index();
     }
 

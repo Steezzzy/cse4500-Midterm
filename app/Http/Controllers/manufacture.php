@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Forms\ManufactForm;
 
 class manufacture extends Controller
 {
@@ -10,7 +11,37 @@ class manufacture extends Controller
     public function index()
     {
         $manufacture = manufacture::all();
-        return view('buyer.list',compact('manufacture'));
+        return view('manufacture.list',compact('manufacture'));
+    }
+
+    public function create()
+    {
+        return view('buyer.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+             'name' => 'required',
+             'cell' => 'required',
+             'address' => 'required',
+        ]);
+
+        $todo = Buyer::create([ 
+             'name' => $request->name, 
+             'cell' => $request->cell, 
+             'address' => $request->address,
+            
+        ]);
+
+        return $this->index();
+    }
+
+
+    public function show($id)
+    {
+        $buyer= Buyer::find($id); 
+        return view('buyer.show',compact('buyer'));
     }
 
 }
