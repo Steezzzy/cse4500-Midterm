@@ -1,6 +1,8 @@
 <?php
-use App\Http\Controllers\TodoController;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\equipment;
+use App\Http\Controllers\invoice;
+use App\Http\Controllers\manufacture;
 
 Route::get('/', function () {
     return view('welcome');
