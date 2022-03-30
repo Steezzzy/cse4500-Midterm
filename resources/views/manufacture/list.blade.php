@@ -29,7 +29,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('manufacture.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('manufacturer.create') }} " class="btn btn-primary" >Create</a>
 
 
 
