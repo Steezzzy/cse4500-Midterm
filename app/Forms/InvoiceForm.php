@@ -12,7 +12,7 @@ class InvoiceForm extends Form
     public function buildForm()
     {
         $this -> 
-        add('buyer_id', Field::NUMBER, [
+        add('buyers_id', Field::NUMBER, [
             'rules' => 'required',
         'label' => 'Buyer Number'
         ])
