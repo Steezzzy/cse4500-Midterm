@@ -37,7 +37,7 @@ class NotesController extends Controller
 
     public function show($id)
     {
-        $notes= Notes::find($id); 
-        return view('notes.detail',compact('notes'));
+        $note= Notes::find($id); 
+        return view('notes.detail',compact('note'));
     }
 }
