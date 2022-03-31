@@ -27,7 +27,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('notes.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('note.create') }} " class="btn btn-primary" >Create</a>
 
 
 
