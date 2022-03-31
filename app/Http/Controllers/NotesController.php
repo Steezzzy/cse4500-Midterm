@@ -18,7 +18,7 @@ class NotesController extends Controller
     {
         $form = $formBuilder->create(NotesForm::class, [
             'method' => 'POST',
-            'url' => route('notes.store')
+            'url' => route('note.store')
         ]);
         return view('notes.create', compact('form'));
     }
