@@ -11,20 +11,20 @@
   <div class="card-body">
     <div>
         <div class="h1">
-            {{ $notes->name }}
+            {{ $note->name }}
         </div>
         <dl class="row">
             <dt class="col-sm-3">Cell Phone</dt>
-            <dd class="col-sm-9">{{ $notes->notes }}</dd>
+            <dd class="col-sm-9">{{ $note->notes }}</dd>
 
             <dt class="col-sm-3">Address</dt>
-            <dd class="col-sm-9">{{ $notes->services }}</dd>
+            <dd class="col-sm-9">{{ $note->services }}</dd>
 
             <dt class="col-sm-3">Cell Phone</dt>
-            <dd class="col-sm-9">{{ $notes->software }}</dd>
+            <dd class="col-sm-9">{{ $note->software }}</dd>
 
             <dt class="col-sm-3">Cell Phone</dt>
-            <dd class="col-sm-9">{{ $notes->equipment_id }}</dd>
+            <dd class="col-sm-9">{{ $note->equipment_id }}</dd>
         </dl>
     </div>
 @stop

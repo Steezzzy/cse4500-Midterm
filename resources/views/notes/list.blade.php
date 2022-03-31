@@ -16,11 +16,11 @@
         </tr>
       </thead>
       <tbody>
-        @foreach($notes AS $notes)
+        @foreach($notes AS $note)
         <tr>
-          <td>{{ $notes->id }}</td>
-          <td>{{ $notes->name }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('note.show',['note'=>$notes->id]) }}">View</a></td>
+          <td>{{ $note->id }}</td>
+          <td>{{ $note->name }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('note.show',['note'=>$note->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
