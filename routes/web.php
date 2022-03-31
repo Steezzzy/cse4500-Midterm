@@ -19,9 +19,6 @@ Route::get('/', function () {
 
 URL::forceScheme('https');
 
-Route::get('/invoice', function () {
-    return view('invoice');
-});
 
 Route::get('/calendar', function () {
     return view('calendar');
