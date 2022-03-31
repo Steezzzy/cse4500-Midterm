@@ -20,7 +20,7 @@
         <tr>
           <td>{{ $notes->id }}</td>
           <td>{{ $notes->name }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('note.show',['notes'=>$notes->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['notes'=>$notes->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
